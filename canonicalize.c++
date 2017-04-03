@@ -16,7 +16,7 @@ int main() {
     // AFL to think that it has found "hang" bugs.
     options.traversalLimitInWords = 8 * 1024;
 
-    capnp::StreamFdMessageReader message(0, options);
+    capnp::StreamFdMessageReader message(0, options); // read from stdin
     MyStruct::Reader myStruct = message.getRoot<MyStruct>();
     canonical = capnp::canonicalize(myStruct);
 
