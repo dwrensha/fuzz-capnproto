@@ -55,4 +55,6 @@ int main() {
   for (int idx = 0; idx < b1.size(); ++idx) {
     KJ_ASSERT(b1[idx] == b2[idx]);
   }
+
+  return 0;
 }
